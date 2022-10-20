@@ -1,1 +1,1 @@
-Shell Scripting help files (Bash)
+Shell Scripting help files (Bash & sh)
