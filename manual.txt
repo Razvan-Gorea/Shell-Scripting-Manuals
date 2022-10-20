@@ -1,0 +1,330 @@
+------
+[Linux/Unix commands]
+------
+
+Extra resources:
+[https://humphryscomputing.com/Notes/UNIX/tutorials.html]
+[https://linuxhandbook.com/linux-file-permissions/]
+[https://www.shellscript.sh/]
+[https://humphryscomputing.com/Notes/UNIX/shell.more.html#env.vars]
+
+$ command (arg1) (arg2) ...
+[the command line]
+
+mv file .file
+[make a file hidden]
+
+file permissions
+[from right to left: user owner --> group owner --> other]
+
+command > file
+[redirect standard output to a file]
+
+command >> file
+[append standard output to a file]
+
+command < file
+[redirect standard input from a file]
+
+*
+[match any number of charcters]
+
+cp file1 file2 
+[copy file1 and call it file2 (to make duplicate of file)]
+
+mv file1 file2 
+[move or rename file1 to file2 (removes file1 in the process)]
+
+rm file 
+[remove a file]
+
+rmdir directory 
+[remove a directory]
+
+cat file 
+[display contents of a file]
+
+less file 
+[display contents of a file a page at a time]
+
+head file 
+[display the first 10 lines of a file]
+
+head -5 file 
+[display the first 5 lines of a file]
+
+tail file 
+[display the last 10 lines of a file]
+
+grep 'keyword' file 
+[search a file for keywords]
+
+wc -w file 
+[word count in file]
+
+wc -l file 
+[line count in file]
+
+wc -L file 
+[gives the width of the widest line in a file]
+
+grep -i 'keyword' file 
+[search a file for keywords ignoring case sensitives]
+
+ls 
+[list files and directories]
+
+ls -a 
+[list all files and directories, including the ones that are hidden]
+
+ls -l
+[lists all files and directories detailed]
+
+ls -p
+[returns all disk file paths to a specific command]
+
+ls ~
+[returns the files of the home directory]
+
+mkdir (directory name)
+[make a directory]
+
+rmdir (directory name)
+[command to remove a directory]
+
+cd (directory name)
+[directory change to named directory]
+
+cd 
+[change to home-directory]
+
+cd ~ 
+[change to home-directory]
+
+cd .. 
+[change to parent directory]
+
+pwd 
+[display the path of the current directory]
+
+who 
+[list users currently logged in]
+
+man command 
+[read the online manual page for a command]
+
+whatis command 
+[brief description of a command]
+
+apropos keyword 
+[match commands with keyword in their man pages]
+
+chmod +x file 
+[gives execute permissions for a file]
+
+ps 
+[list current processes]
+
+chmod (options) file 
+[change access rights for named file]
+
+uname -a 
+[how to find your current linux/unix version]
+
+du | sort -nr 
+[Displays a list of directories and how much space they consume, sorted from the largest to the smallest]
+
+df -Th
+[See all disks and their file system type]
+
+chmod a+rx file.sh 
+[makes the .sh file executable and readable]
+
+man -k (topic) 
+[list of commands related to a particular topic] 
+
+wget wget -q -O - URL 
+[Download URL, quiet, output to command-line]
+
+wget -q -O - URL > file.htm 
+[Output to file]
+
+wget -q -O file.htm URL 
+[Output to file]
+
+wget -q -O - http://site/file.jpg  > file.jpg 
+[Output JPEG to file]
+
+wget -q -O file.jpg http://site/file.jpg 
+[Output JPEG to file] 
+
+df -Th 
+[See all disks and their file system type]
+
+chmod +x file
+[make a file execuatable then run it without bash, just type filename]
+
+chmod -x file
+[make a file not executable]
+
+chmod ugo-rwx file/directory
+[turn on/off permissions for a file/directory, affecting everyone including yourself] 
+
+(web browser name) &
+[opens the given the given web browser from the command line]
+
+find /etc -type d
+[finds all dictories in the 'etc' path/directory]
+
+sort 
+[sort alphabetically (pipe some stream into sort)]
+
+sort -n		
+[sort numerically]
+
+sort -r		
+[reverse sort] 
+
+cal
+[brings up a calendar]
+
+date
+[brings up the cuurent date and time]
+
+date +%T
+[brings up the current time]
+
+history
+[gives you the history of commands]
+
+kill (process id)       
+[Terminate some of your processes]
+
+kill -1                 
+[Kill all your processes]
+
+xdg-settings get default-web-browser
+[find the default of web browser for your linux system]
+
+script > file
+[To redirect script output to a file from command line]  
+
+-----
+[How to write a shell script]
+[1.First enter a directory, preferably the 'bin' directory]
+[2.Write some commands or code]
+[3.Save the file]
+[4.Exit out of the file]
+[5.Make it executable with 'chmod +x file name']
+[6.Run it by typing the file name]
+-----
+
+
+-----
+[Alternatively, for Einstein shell scripts]
+[set up a sh file]
+[save the sh file]
+[make it excutable by typing chmod +x filename]
+[Caution: make sure you are in the bin directory and check the path]
+-----
+
+
+-----
+[Text Editors]
+[Nano]
+[Vim]
+[Gedit]
+-----
+
+
+-----
+[How to set up aliases]
+[type 'nano .bashrc']
+-----
+
+-----
+[Shell script guide]
+-----
+
+$1     
+[1st command-line argument]
+
+$2     
+[2nd command-line argument]
+
+$*    
+[all arguments]
+
+echo *.py
+[echoes all files ending in '.py' for example]
+
+echo a* 
+[echoes all files starting with 'a' for example]
+
+cat /etc/os-release
+[tells you the linux/unix version]
+
+$HOME
+[home directory]
+
+# Comment 
+
+1.To redirect script output to a file from within the script, put this at start of script:
+
+exec > file 
+
+2.Then run:
+
+script 
+
+-----
+[More Tips:]
+-----
+
+[space (separate arguments)]
+# comment
+[< redirection]
+[> redirection]
+[` result of a program]
+[| pipe]
+[& detach process]
+[; separate multiple commands on the same line]
+
+[* wildcard]
+[? wildcard]
+[^ start of line]
+[$ end of line / variable value]
+[ pattern matching
+] pattern matching
+[\ "quoted" character]
+[/ should be in pathname, not filename]
+[' string delimiter]
+[" string delimiter]
+[! shell history]
+
+
+
+-----
+[Notes on Directory Protections:]
+-----
+    user      group      other
+ [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]
+
+r - read (can do ls)
+w - write
+x - search (can access files given their name)
+
+
+
+-----
+[How to Debug a Program:]
+-----
+
+
+[Strip it down. Remove parts of it.]
+[Get smaller parts working first.]
+[Don't try to do it all at once.]
+[You don't have to delete code. Just comment it out. Then slowly comment it back in.]
+# <---- comment symbol 
+
+
