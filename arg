@@ -1,0 +1,2 @@
+#Print the next thing after the program to the command line
+echo $1
