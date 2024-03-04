@@ -1,3 +1,3 @@
-To basic guides to shell scripting for bash that I wrote
+Two basic guides to shell scripting for bash that I wrote
 
 Enjoy!
